@@ -662,3 +662,9 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+
+function thirtynine_scripts() {
+	wp_enqueue_style( 'style-name', get_template_directory_uri() . '/39.css' );
+}
+add_action( 'wp_enqueue_scripts', 'thirtynine_scripts' );
